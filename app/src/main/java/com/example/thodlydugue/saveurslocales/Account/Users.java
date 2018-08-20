@@ -1,4 +1,4 @@
-package com.example.thodlydugue.saveurslocales;
+package com.example.thodlydugue.saveurslocales.Account;
 
 import java.io.Serializable;
 import java.util.ArrayList;

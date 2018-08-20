@@ -1,5 +1,18 @@
 <resources>
     <string name="app_name">SaveursLocales</string>
+    <!-- texts -->
+    <string name="register_prompt">Do not have an account? Register now</string>
+    <string name="divider_or">OR</string>
+    <string name="register_link">Register</string>
+    <string name="loading_empty">Loading¦</string>
+    <!-- Registered info -->
+    <string name="info_registered_template">Registered. ObjectId: %s</string>
+    <string name="info_registered_success">Registered successfully</string>
+    <string name="info_logged_in">Logged in. ObjectId: %s</string>
+
+    <!-- loading messages -->
+    <string name="loading_register">Sending registration request¦</string>
+    <string name="loading_login">Verification¦</string>
 
     <!-- warnings -->
     <string name="warning_name_empty">Name cannot be empty</string>

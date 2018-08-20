@@ -1,8 +1,10 @@
-package com.example.thodlydugue.saveurslocales;
+package com.example.thodlydugue.saveurslocales.Account;
 
 import android.content.Context;
 import android.util.Patterns;
 import android.widget.Toast;
+
+import com.example.thodlydugue.saveurslocales.R;
 
 public class Validator {
     /**
