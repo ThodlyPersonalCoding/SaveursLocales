@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fillViewport="true">
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" android:background="#fff">
+
+        <LinearLayout android:id="@+id/header"
+            android:layout_width="fill_parent"
+            android:layout_height="200dp"
+            android:paddingTop="5dip"
+            android:paddingBottom="5dip">
+            <ImageView
+                android:id="@+id/imageView2"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="44dp"
+                android:layout_width="wrap_content"
+                android:layout_height="220dp"
+                android:layout_alignParentTop="true"
+                app:srcCompat="@drawable/cover1" />
+        </LinearLayout>
+
+        <!-- Registration Form -->
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dip"
+            android:layout_below="@id/header">
+            <!-- Full Name Label -->
+            <TextView android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#372c24"
+                android:text="Nom Complet"/>
+            <EditText android:id="@+id/nameField"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dip"
+                android:layout_marginBottom="20dip"/>
+            <!--  Email Label -->
+            <TextView android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#372c24"
+                android:text="Email"/>
+            <EditText android:id="@+id/emailField"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dip"
+                android:singleLine="true"
+                android:layout_marginBottom="20dip"/>
+            <!-- Password Label -->
+            <TextView android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#372c24"
+                android:text="Password"/>
+            <EditText android:id="@+id/passwordField"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:layout_marginTop="5dip"/>
+
+            <!-- Confirm Password Label -->
+            <TextView android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#372c24"
+                android:text="Confirmer"/>
+            <EditText android:id="@+id/passwordConfirmField"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:layout_marginTop="5dip"/>
+            <!-- Register Button -->
+            <Button android:id="@+id/registerButton"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:background="@color/colorPrimaryDark"
+                android:textColor="#FFFF"
+                android:text="Enregistrer"/>
+
+        </LinearLayout>
+    </RelativeLayout>
+</ScrollView>
