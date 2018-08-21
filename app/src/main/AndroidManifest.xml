@@ -20,7 +20,13 @@
             </intent-filter>
         </activity>
         <activity android:name=".Account.RegisterActivity" />
+        <activity android:name=".DetailsActivity"/>
+        <activity android:name=".SoupActivity"/>
+        <activity android:name=".DessertsActivity"/>
+        <activity android:name=".ViandesActivity"/>
+        <activity android:name=".PoissonsActivity"/>
+        <activity android:name=".BoissonsActivity"/>
+        <activity android:name=".ApperitifsActivity"/>
         <activity android:name=".CategorieMenuActivity"/>
     </application>
-
 </manifest>

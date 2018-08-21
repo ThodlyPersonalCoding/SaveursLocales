@@ -1,6 +1,7 @@
 package com.example.thodlydugue.saveurslocales;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -35,22 +36,28 @@ public class CategorieMenuActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
                 if (position == 0) {
-                    Toast.makeText(CategorieMenuActivity.this, "Bonjour1", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(CategorieMenuActivity.this, SoupActivity.class);
+                    startActivity(intent);
                 }
                 if (position == 1) {
-                    Toast.makeText(CategorieMenuActivity.this, "Bonjour2", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(CategorieMenuActivity.this, DessertsActivity.class);
+                    startActivity(intent);
                 }
                 if (position == 2) {
-                    Toast.makeText(CategorieMenuActivity.this, "Bonjour3", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(CategorieMenuActivity.this, BoissonsActivity.class);
+                    startActivity(intent);
                 }
                 if (position == 3) {
-                    Toast.makeText(CategorieMenuActivity.this, "Bonjour4", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(CategorieMenuActivity.this, ViandesActivity.class);
+                    startActivity(intent);
                 }
                 if (position == 4) {
-                    Toast.makeText(CategorieMenuActivity.this, "Bonjour5", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(CategorieMenuActivity.this, ApperitifsActivity.class);
+                    startActivity(intent);
                 }
                 if (position == 5) {
-                    Toast.makeText(CategorieMenuActivity.this, "Bonjour6", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(CategorieMenuActivity.this, PoissonsActivity.class);
+                    startActivity(intent);
                 }
             }
         });
