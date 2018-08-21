@@ -16,22 +16,18 @@ import android.widget.Toast;
 import com.backendless.Backendless;
 import com.backendless.BackendlessUser;
 import com.backendless.async.callback.AsyncCallback;
+import com.example.thodlydugue.saveurslocales.CategorieMenuActivity;
 import com.example.thodlydugue.saveurslocales.R;
-
-import static android.provider.UserDictionary.Words.APP_ID;
-import static javax.crypto.Cipher.SECRET_KEY;
 
 public class LoginActivity extends AppCompatActivity {
     public  static  String idUser;
-
     //faire appel au fichier validator pour verifier avant de permettre a la personne de se connecter
     public com.example.thodlydugue.saveurslocales.Account.Validator validator;
     private static final int REGISTER_REQUEST_CODE = 1;
-    private Button btconnecter;
-    private Button btinscrire;
+
 
     //faire appel au Backend Settings
-    public static final String AplicationID="0194C491-E19B-FE7A-FFBD-B3BBAC63CE00";
+    public static final String ApplicationID="0194C491-E19B-FE7A-FFBD-B3BBAC63CE00";
     public static final String SecretKey="006C1FAB-E51B-1553-FF78-0252E07EA900";
 
     @Override
@@ -39,7 +35,7 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        Backendless.initApp(this, AplicationID, SecretKey);
+        Backendless.initApp(this, ApplicationID, SecretKey);
         Button loginButton = (Button) findViewById(R.id.loginButton);
         loginButton.setOnClickListener(createLoginButtonListener());
         makeRegistrationLink();
@@ -85,31 +81,7 @@ public class LoginActivity extends AppCompatActivity {
         Backendless.UserService.login(email, password, loginCallback);
     }
 
-    /**
-     * Sends a request to Backendless to log in user with Facebook account.
-     * Fetches Facebook user's name and saves it on Backendless.
-     *
-     * @param loginCallback a callback, containing actions to be executed on request result
-     */
-   /* public void loginFacebookUser( AsyncCallback<BackendlessUser> loginCallback )
-    {
-        Map<String, String> fieldsMappings = new HashMap<>();
-        fieldsMappings.put( "name", "name" );
-        Backendless.UserService.loginWithFacebook( this, null, fieldsMappings, Collections.<String>emptyList(), loginCallback );
-    }*/
 
-    /**
-     * Sends a request to Backendless to log in user with Twitter account.
-     * Fetches Twitter user's name and saves it on Backendless.
-     *
-     * @param loginCallback a callback, containing actions to be executed on request result
-     */
-   /* public void loginTwitterUser( AsyncCallback<BackendlessUser> loginCallback )
-    {
-        Map<String, String> fieldsMappings = new HashMap<>();
-        fieldsMappings.put( "name", "name" );
-        Backendless.UserService.loginWithTwitter( this, null, fieldsMappings, loginCallback );
-    }*/
 
     /**
      * Creates a listener, which proceeds with login by email and password on button click.
@@ -167,8 +139,9 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void handleResponse(BackendlessUser loggedInUser) {
                 super.handleResponse(loggedInUser);
-                Toast.makeText(LoginActivity.this, String.format(getString(R.string.info_logged_in), loggedInUser.getObjectId()), Toast.LENGTH_LONG).show();
-
+                //Toast.makeText(LoginActivity.this, String.format(getString(R.string.info_logged_in), loggedInUser.getObjectId()), Toast.LENGTH_LONG).show();
+                Intent intent= new Intent(LoginActivity.this, CategorieMenuActivity.class);
+                startActivity(intent);
                 idUser=loggedInUser.getObjectId();
 
             }
