@@ -14,14 +14,12 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
-import android.graphics.Color;
 
 public class CategorieMenuActivity extends AppCompatActivity {
 
     ListView list;
-    String titles [] = {"Soupes", "Desserts", "Boissons", "Viandes", "Apperitifs", "Poissons"};
-    int imgs [] = {R.drawable.bowl, R.drawable.cupcake, R.drawable.lemonade, R.drawable.chickenoutline, R.drawable.antipasto, R.drawable.fish};
+    String titles [] = {"Apperitifs", "Desserts", "Boissons", "Viandes", "Poissons", "Soupes"};
+    int imgs [] = {R.drawable.antipasto, R.drawable.cupcake, R.drawable.lemonade, R.drawable.chickenoutline, R.drawable.fish, R.drawable.bowl};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,7 +34,7 @@ public class CategorieMenuActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
                 if (position == 0) {
-                    Intent intent = new Intent(CategorieMenuActivity.this, SoupActivity.class);
+                    Intent intent = new Intent(CategorieMenuActivity.this, ApperitifsActivity.class);
                     startActivity(intent);
                 }
                 if (position == 1) {
@@ -52,11 +50,11 @@ public class CategorieMenuActivity extends AppCompatActivity {
                     startActivity(intent);
                 }
                 if (position == 4) {
-                    Intent intent = new Intent(CategorieMenuActivity.this, ApperitifsActivity.class);
+                    Intent intent = new Intent(CategorieMenuActivity.this, PoissonsActivity.class);
                     startActivity(intent);
                 }
                 if (position == 5) {
-                    Intent intent = new Intent(CategorieMenuActivity.this, PoissonsActivity.class);
+                    Intent intent = new Intent(CategorieMenuActivity.this, SoupActivity.class);
                     startActivity(intent);
                 }
             }
@@ -70,7 +68,7 @@ public class CategorieMenuActivity extends AppCompatActivity {
         int[] imgs;
 
         public MyAdapter(Context c, String[] titles, int [] images){
-            super(c,R.layout.row, R.id.tv1, titles);
+            super(c,R.layout.listviewrow, R.id.tv1, titles);
             this.context=c;
             this.imgs=images;
             this.myTitles=titles;
@@ -80,7 +78,7 @@ public class CategorieMenuActivity extends AppCompatActivity {
         @Override
         public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
             LayoutInflater layoutInflater = (LayoutInflater)getApplicationContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            View row = layoutInflater.inflate(R.layout.row, parent,false);
+            View row = layoutInflater.inflate(R.layout.listviewrow, parent,false);
             ImageView images =row.findViewById(R.id.logo);
             TextView myTitle = row.findViewById(R.id.tv1);
             images.setImageResource(imgs[position]);

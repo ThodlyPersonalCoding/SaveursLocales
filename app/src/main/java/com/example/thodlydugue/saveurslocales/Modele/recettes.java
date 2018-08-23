@@ -10,6 +10,7 @@ public class recettes implements Serializable{
 
     private String nom_recette;
     private String image_recette;
+    private String image_recette1;
     private categories id_categorie;
     private String description;
     private String ingredients;
@@ -36,6 +37,7 @@ public class recettes implements Serializable{
     public recettes(){
         this.nom_recette=getNom_recette();
         this.image_recette=getImage_recette();
+        this.image_recette1=getImage_recette1();
     }
 
 
@@ -53,6 +55,13 @@ public class recettes implements Serializable{
 
     public void setImage_recette(String image_recette) {
         this.image_recette = image_recette;
+    }
+    public String getImage_recette1() {
+        return image_recette1;
+    }
+
+    public void setImage_recette1(String image_recette1) {
+        this.image_recette1 = image_recette1;
     }
 
     public categories getId_categorie() {
@@ -83,7 +92,7 @@ public class recettes implements Serializable{
             p.setDescription((String) map.get(i).get("description"));
             p.setIngredients((String) map.get(i).get("ingredients"));
             p.setPreparation((String) map.get(i).get("preparation"));
-
+            p.setImage_recette1((String) map.get(i).get("image_recette1"));
             recette.add(p);
         }
         return recette;
