@@ -36,6 +36,7 @@ public class RecyclerViewRecetteAdapter extends RecyclerView.Adapter<RecyclerVie
 
         viewHolder.txtrecette.setText(recettes.get(i).getNom_recette());
         Picasso.with(context).load(recettes.get(i).getImage_recette()).resize(240, 120).into(viewHolder.imrecette);
+        Picasso.with(context).load(recettes.get(i).getImage_recette1()).resize(150, 50).into(viewHolder.imrecette1);
     }
 
     @Override
@@ -46,11 +47,13 @@ public class RecyclerViewRecetteAdapter extends RecyclerView.Adapter<RecyclerVie
     public class ViewHolder extends RecyclerView.ViewHolder{
         private TextView txtrecette;
         private ImageView imrecette;
+        private ImageView imrecette1;
         public ViewHolder(View view) {
             super(view);
 
             txtrecette = (TextView)view.findViewById(R.id.txtrecette);
             imrecette = (ImageView) view.findViewById(R.id.imrecette);
+            imrecette1 = (ImageView) view.findViewById(R.id.imrecette1);
         }
     }
 

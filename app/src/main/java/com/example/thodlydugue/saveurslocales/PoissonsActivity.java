@@ -113,9 +113,6 @@ public class PoissonsActivity extends AppCompatActivity {
 
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                //view is an instance of MovieView
-                //Expose details of movie (ratings (out of 10), popularity, and synopsis
-                //ratings using RatingBar
                 recettes recette = listRecette.get(position);
 
                 Intent intent = new Intent(PoissonsActivity.this, DetailsActivity.class);

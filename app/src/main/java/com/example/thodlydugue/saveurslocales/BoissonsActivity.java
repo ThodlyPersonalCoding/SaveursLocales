@@ -58,7 +58,7 @@ public class BoissonsActivity extends AppCompatActivity {
             }
         });
 
-        getSupportActionBar().setTitle("Viandes");
+        getSupportActionBar().setTitle("Boissons");
 
 
         Backendless.initApp(getApplicationContext(), AplicationID, SecretKey);
@@ -112,9 +112,6 @@ public class BoissonsActivity extends AppCompatActivity {
 
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                //view is an instance of MovieView
-                //Expose details of movie (ratings (out of 10), popularity, and synopsis
-                //ratings using RatingBar
                 recettes recette = listRecette.get(position);
 
                 Intent intent = new Intent(BoissonsActivity.this, DetailsActivity.class);
