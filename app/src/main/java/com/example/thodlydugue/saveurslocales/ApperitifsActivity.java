@@ -59,7 +59,7 @@ public class ApperitifsActivity extends AppCompatActivity {
             }
         });
 
-        getSupportActionBar().setTitle("Apperitifs");
+        getSupportActionBar().setTitle("Apperitifs/Salades");
 
 
         Backendless.initApp(getApplicationContext(), AplicationID, SecretKey);

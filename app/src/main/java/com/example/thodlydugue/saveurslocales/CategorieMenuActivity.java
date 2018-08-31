@@ -18,7 +18,7 @@ import android.widget.TextView;
 public class CategorieMenuActivity extends AppCompatActivity {
 
     ListView list;
-    String titles [] = {"Apperitifs", "Desserts", "Boissons", "Viandes", "Poissons", "Soupes"};
+    String titles [] = {"Apperitifs/Salades", "Desserts", "Boissons", "Viandes", "Poissons", "Soupes"};
     int imgs [] = {R.drawable.antipasto, R.drawable.cupcake, R.drawable.lemonade, R.drawable.chickenoutline, R.drawable.fish, R.drawable.bowl};
 
     @Override
