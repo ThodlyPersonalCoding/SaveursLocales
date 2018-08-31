@@ -83,13 +83,13 @@ public class DetailsActivity extends AppCompatActivity {
             }
         });
 
-        btnfav=(FloatingActionButton)findViewById(R.id.floatingActionButton);
-        btnfav.setOnClickListener(new View.OnClickListener(){
-            public void onClick(View v) {
-                savefavorite();
+        //btnfav=(FloatingActionButton)findViewById(R.id.floatingActionButton);
+        //btnfav.setOnClickListener(new View.OnClickListener(){
+            //public void onClick(View v) {
+             //   savefavorite();
 
-            }
-        });
+           // }
+       // });
     }
 
 
