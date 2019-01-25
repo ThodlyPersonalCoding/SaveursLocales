@@ -27,15 +27,14 @@ public class LoginActivity extends AppCompatActivity {
 
 
     //faire appel au Backend Settings
-    public static final String ApplicationID="0194C491-E19B-FE7A-FFBD-B3BBAC63CE00";
-    public static final String SecretKey="006C1FAB-E51B-1553-FF78-0252E07EA900";
+    public static final String AplicationID="949D0F2E-50E2-0798-FFDA-71D1739A3A00";
+    public static final String SecretKey="B3D0E06C-FB7A-E882-FF28-ABB2915CD600";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-
-        Backendless.initApp(this, ApplicationID, SecretKey);
+        Backendless.initApp(this, AplicationID, SecretKey);
         Button loginButton = (Button) findViewById(R.id.loginButton);
         loginButton.setOnClickListener(createLoginButtonListener());
         makeRegistrationLink();

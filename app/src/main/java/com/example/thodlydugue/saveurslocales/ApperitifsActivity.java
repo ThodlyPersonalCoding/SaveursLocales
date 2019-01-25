@@ -31,9 +31,8 @@ public class ApperitifsActivity extends AppCompatActivity {
 
     ProgressDialog progress;
 
-    public static final String AplicationID = "0194C491-E19B-FE7A-FFBD-B3BBAC63CE00";
-    public static final String SecretKey = "006C1FAB-E51B-1553-FF78-0252E07EA900";
-
+    public static final String AplicationID="949D0F2E-50E2-0798-FFDA-71D1739A3A00";
+    public static final String SecretKey="B3D0E06C-FB7A-E882-FF28-ABB2915CD600";
     private recettes recette;
 
 
