@@ -22,7 +22,6 @@ public class RegisterActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
         Backendless.initApp( this, BackendSettings.AplicationID, BackendSettings.SecretKey );
-
         Button registerButton = (Button) findViewById( R.id.registerButton );
         View.OnClickListener registerButtonClickListener = createRegisterButtonClickListener();
         registerButton.setOnClickListener( registerButtonClickListener );
